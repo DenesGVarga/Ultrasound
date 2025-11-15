@@ -10,7 +10,7 @@ center = [grid_size/2, grid_size/2];
 radius = (fa_atmero/2) * skala;
 
 % Anyagparaméterek
-c_fa = 1500;            % Hangsebesség fában (m/s)
+c_wood = 1500;            % Hangsebesség fában (m/s)
 c_acel = 5000;          % Hangsebesség acélban (m/s)
 frekvencia = 40e3;      % 40 kHz
 lambda_fa = c_fa/frekvencia;
@@ -20,7 +20,7 @@ dx = lambda_fa/8;
 dt = 0.6*dx/(sqrt(2)*c_acel);
 
 % Csillapítási tényezők
-damping_fa = 0.992;
+damping_wood = 0.992;
 damping_acel = 0.998;
 
 % === INICIALIZÁLÁS === %
@@ -121,4 +121,5 @@ for t = 1:num_frames
     u = u_next;
     u_next = zeros(grid_size);
 end
+
 
